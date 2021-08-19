@@ -1,0 +1,70 @@
+@import "reset.css";
+
+body {
+  background-color: #fff;
+}
+
+@keyframes rotateBox {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  perspective: 1500px;
+}
+
+.rotate__box {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateBox 30s linear infinite;
+}
+
+#box {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+.front-box {
+  transform: translate3d(-200px, -200px, 200px);
+  background: #c5cae9;
+  opacity: 0.5;
+}
+
+.back-box {
+  transform: translate3d(-200px, -200px, -200px);
+  background: #ffcdd2;
+  opacity: 0.5;
+}
+
+.right-box {
+  transform: translate3d(0, -200px, 0) rotateY(90deg);
+  background: #c5cae9;
+  opacity: 0.5;
+}
+
+.left-box {
+  transform: translate3d(-400px, -200px, 0) rotateY(90deg);
+  background: #c5cae9;
+  opacity: 0.5;
+}
+
+.bottom-box {
+  transform: translate3d(-200px, -200px, 0) rotateX(90deg);
+  background: #c5cae9;
+  opacity: 0.5;
+}
+
+.top-box {
+  transform: translate3d(-200px, -400px, 0) rotateX(90deg);
+  background: #c5cae9;
+  opacity: 0.5;
+}
