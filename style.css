@@ -1,7 +1,7 @@
 @import "reset.css";
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 
 @keyframes rotateBox {
@@ -9,7 +9,7 @@ body {
     transform: rotate3d(0, 0, 0, 0);
   }
   100% {
-    transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(1, 1, 1, 360deg);
   }
 }
 
@@ -47,24 +47,25 @@ body {
 
 .right-box {
   transform: translate3d(0, -200px, 0) rotateY(90deg);
-  background: #c5cae9;
+  background: #c8e6c9;
   opacity: 0.5;
 }
 
 .left-box {
   transform: translate3d(-400px, -200px, 0) rotateY(90deg);
-  background: #c5cae9;
+  background: #ffe0b2;
   opacity: 0.5;
 }
 
 .bottom-box {
-  transform: translate3d(-200px, -200px, 0) rotateX(90deg);
-  background: #c5cae9;
+  transform: translate3d(-200px, 
+  50px, 0) rotateX(90deg);
+  background: #d7ccc8;
   opacity: 0.5;
 }
 
 .top-box {
   transform: translate3d(-200px, -400px, 0) rotateX(90deg);
-  background: #c5cae9;
+  background: #ffcdd2;
   opacity: 0.5;
 }
