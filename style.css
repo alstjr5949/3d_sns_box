@@ -20,9 +20,12 @@ body {
   perspective: 1500px;
 }
 
-.rotate__box {
+#rotateBox {
   position: relative;
   transform-style: preserve-3d;
+}
+
+.rotate__box {
   animation: rotateBox 30s linear infinite;
 }
 
@@ -30,7 +33,7 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  border: 2px solid black;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
