@@ -1,22 +1,20 @@
-const boxs = document.querySelectorAll("#box");
+const instaBox = document.querySelector(".insta-box");
+const fbBox = document.querySelector(".fb-box");
+const githubBox = document.querySelector(".github-box");
+const twitBox = document.querySelector(".twit-box");
+const mailBox = document.querySelector(".mail-box");
+const blogBox = document.querySelector(".blog-box");
 const rotateBox = document.querySelector("#rotateBox");
 
-function boxHoverEvent(){
+function instaHoverHandeler(){
   rotateBox.classList.remove("rotate__box");
+  rotateBox.classList.add("rotate__insta-box");
 }
 
-function boxHoverOutEvent(){
+function instaOutHandeler(){
   rotateBox.classList.add("rotate__box");
+  rotateBox.classList.remove("rotate__insta-box");
 }
 
-for(let i =0; i < boxs.length; i++){
-  function boxHoverEvent(){
-    rotateBox.classList.remove("rotate__box");
-  }
-  
-  function boxHoverOutEvent(){
-    rotateBox.classList.add("rotate__box");
-  }
-  boxs[i].addEventListener("mouseover", boxHoverEvent);
-  boxs[i].addEventListener("mouseout", boxHoverOutEvent);
-}
+instaBox.addEventListener("mouseover", instaHoverHandeler);
+instaBox.addEventListener("mouseout", instaOutHandeler);

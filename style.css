@@ -13,6 +13,15 @@ body {
   }
 }
 
+@keyframes rotateInstaBox {
+  0% {
+    transform: rotate3d(0, 0.3, 0, 30deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+}
+
 .wrapper {
   position: absolute;
   top: 50%;
@@ -23,6 +32,10 @@ body {
 #rotateBox {
   position: relative;
   transform-style: preserve-3d;
+}
+
+.rotate__insta-box {
+  animation: rotateInstaBox 0.5s linear forwards;
 }
 
 .rotate__box {
@@ -42,7 +55,7 @@ body {
 .fa-instagram,
 .fa-facebook-f,
 .fa-github-square,
-.fa-twitter-square,
+.fa-twitter,
 .fa-envelope,
 .fa-blog {
   font-size: 100px;
@@ -72,26 +85,50 @@ body {
   opacity: 1;
 }
 
-.right-box {
+.blog-box {
   transform: translate3d(0, -200px, 0) rotateY(90deg);
   background: #fafafa;
   opacity: 0.7;
 }
 
-.left-box {
+.blog-box:hover {
+  background: #e4511d;
+  color: white;
+  opacity: 1;
+}
+
+.mail-box {
   transform: translate3d(-400px, -200px, 0) rotateY(90deg);
   background: #fafafa;
   opacity: 0.7;
 }
 
-.bottom-box {
+.mail-box:hover {
+  background: #d7494d;
+  color: white;
+  opacity: 1;
+}
+
+.github-box {
   transform: translate3d(-200px, 0px, 0) rotateX(90deg);
   background: #fafafa;
   opacity: 0.7;
 }
 
-.top-box {
+.github-box:hover {
+  background: #000;
+  color: #fefefe;
+  opacity: 1;
+}
+
+.twit-box {
   transform: translate3d(-200px, -400px, 0) rotateX(90deg);
   background: #fafafa;
   opacity: 0.7;
+}
+
+.twit-box:hover {
+  background: #5aa7d9;
+  color: white;
+  opacity: 1;
 }
