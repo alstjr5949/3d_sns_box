@@ -4,24 +4,6 @@ body {
   background-color: white;
 }
 
-@keyframes rotateBox {
-  0% {
-    transform: rotate3d(0, 0, 0, 0);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
-}
-
-@keyframes rotateInstaBox {
-  0% {
-    transform: rotate3d(0, 0.3, 0, 30deg);
-  }
-  100% {
-    transform: rotate3d(0, 0, 0, 0);
-  }
-}
-
 .wrapper {
   position: absolute;
   top: 50%;
@@ -32,17 +14,20 @@ body {
 #rotateBox {
   position: relative;
   transform-style: preserve-3d;
-}
-
-.rotate__insta-box {
-  animation: rotateInstaBox 0.5s linear forwards;
+  width: 10px;
+  height: 10px;
 }
 
 .rotate__box {
   animation: rotateBox 30s linear infinite;
 }
 
-#box {
+.rotate__insta-box {
+  animation: rotateInstaBox 1s linear forwards;
+  animation-play-state: running;
+}
+
+.box {
   position: absolute;
   width: 400px;
   height: 400px;
@@ -59,6 +44,7 @@ body {
 .fa-envelope,
 .fa-blog {
   font-size: 100px;
+  cursor: pointer;
 }
 
 .insta-box {
@@ -83,6 +69,10 @@ body {
   background: #1177f2;
   color: white;
   opacity: 1;
+}
+
+.fb-box span {
+  transform: rotateY(180deg);
 }
 
 .blog-box {
